@@ -20,7 +20,7 @@ console.log(area(2, 4))
 
 const crazySum = function(n1, n2) {
     if (n1 === n2) {
-        return n1 * n2
+        return (n1 + n2) * 3
     } else {
         return n1 + n2
     }
@@ -55,7 +55,7 @@ console.log('crazydiff', crazyDiff(60))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const boundary = function(n){
-    if (n >= 20 && n <= 100 || n === 400) {
+    if ((n >= 20 && n <= 100) || n === 400) {
         return true
     } else {
         return false
@@ -134,11 +134,13 @@ console.log(reverseString('ciao'))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const upperFirst = function(str) {
-    let words = str.split(' ')
+    let words = str.split(' ') //separa con lo spazio
     //console.log(words)
     //toUpperCase()
+    //let result = ''
     for(let i = 0; i < words.length; i++) {
         words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+        // result += words[i].charAt(0).toUpperCare + words[i].slice(1) + ' '
     }
     return words.join(' ')
 }
